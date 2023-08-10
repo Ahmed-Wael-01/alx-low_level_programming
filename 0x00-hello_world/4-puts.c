@@ -1,5 +1,10 @@
 #include <stdio.h>
-/*just a c program*/
+/**
+ * main - function
+ *
+ * Discription: prints with puts
+ * Return: should return 0
+ */
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
