@@ -11,7 +11,7 @@ int main(void)
 	char a = 'a';
 
 	while (a <= 'z')
-		printf("%c", a++);
-	printf("\n");
+		putchar("%c", a++);
+	putchar("\n");
 	return (0);
 }
