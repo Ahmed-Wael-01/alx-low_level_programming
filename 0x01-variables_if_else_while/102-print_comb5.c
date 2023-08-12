@@ -23,20 +23,17 @@ int main(void)
 
 				while (b2 <= 9)
 				{
-					if (a1 != b1 || a2 != b2)
+					if ((a1 != b1 || a2 != b2) && (a1 < b1 || (a1 == b1 && a2 < b2)))
 					{
-						if (a1 < b1 || (a1 == b1 && a2 < b2))
+						putchar('0' + a1);
+						putchar('0' + a2);
+						putchar(' ');
+						putchar('0' + b1);
+						putchar('0' + b2);
+					if (a1 != 9 || a2 != 8 || b1 != 9 || b2 != 9)
 						{
-							putchar('0' + a1);
-							putchar('0' + a2);
-							putchar(' ');
-							putchar('0' + b1);
-							putchar('0' + b2);
-							if (a1 != 9 || a2 != 8 || b1 != 9 || b2 != 9)
-							{
-							putchar(',');
-							putchar(' ');
-							}
+						putchar(',');
+						putchar(' ');
 						}
 					}
 					b2++;
