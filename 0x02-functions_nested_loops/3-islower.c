@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
-* int _islower - print alpha
+*  _islower - print alpha
+* c - the number to compare
 *
 * Description: it does smthing
 * Return: 0
