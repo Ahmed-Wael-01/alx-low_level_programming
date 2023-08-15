@@ -2,7 +2,7 @@
 
 /**
 *  _islower - print alpha
-* c - the number to compare
+* @c: the number to compare
 *
 * Description: it does smthing
 * Return: 0
