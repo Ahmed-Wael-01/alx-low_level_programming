@@ -13,7 +13,7 @@ void print_to_98(int n)
 
 	if (n <= 98)
 	{
-		for (n ; n <= RETRO ; n++)
+		for (; n <= RETRO ; n++)
 		{
 			if(n == RETRO)
 				printf("%d\n", RETRO);
@@ -23,7 +23,7 @@ void print_to_98(int n)
 	}
 	else
 	{
-		for (n ; n >= RETRO ; n--)
+		for (; n >= RETRO ; n--)
 		{
 			if(n == RETRO)
 				printf("%d\n", RETRO);
