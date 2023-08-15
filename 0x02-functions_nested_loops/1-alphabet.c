@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * Description: it does smthing
- * Return: 0
+* print_alphabet - print alpha
+*
+* Description: it does smthing
+* Return: 0
 */
 void print_alphabet(void)
 {
