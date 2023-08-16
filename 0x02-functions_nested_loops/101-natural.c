@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
-* nature - print alpha
+* main - print alpha
 *
 * Description: it does smthing
 * Return: 0
