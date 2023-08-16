@@ -9,6 +9,7 @@
 int main(void)
 {
 	int i;
+
 	unsigned int long pastNum = 2;
 	unsigned int long veryPastNum = 1;
 	unsigned int long presentNum;
