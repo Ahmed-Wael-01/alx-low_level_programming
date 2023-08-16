@@ -18,7 +18,6 @@ int main(void)
 		if ((i % 3) == 0 || (i % 5) == 0)
 			total += i;
 	}
-	printf("%d", total);
-	_putchar('\n');
+	printf("%d\n", total);
 	return (0);
 }
