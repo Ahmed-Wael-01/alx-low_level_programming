@@ -8,7 +8,7 @@
 */
 int main(void)
 {
-	long long int total;
+	long int total = 2;
 	long int pastNum = 2;
 	long int veryPastNum = 1;
 	long int presentNum = 0;
@@ -23,6 +23,6 @@ int main(void)
 		veryPastNum = pastNum;
 		pastNum = presentNum;
 	}
-	printf("%lld\n", total);
+	printf("%ld\n", total);
 	return (0);
 }
