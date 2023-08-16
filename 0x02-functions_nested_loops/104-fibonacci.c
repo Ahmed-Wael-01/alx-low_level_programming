@@ -10,16 +10,16 @@ int main(void)
 {
 	int i;
 
-	unsigned int long pastNum = 2;
-	unsigned int long veryPastNum = 1;
-	unsigned int long presentNum;
+	long double pastNum = 2;
+	long double veryPastNum = 1;
+	long double presentNum;
 
-	printf("%lu, %lu, ", veryPastNum, pastNum);
+	printf("%.0lf, %.0lf, ", veryPastNum, pastNum);
 	for (i = 1; i <= 96; i++)
 	{
 		presentNum = pastNum + veryPastNum;
 
-		printf("%lu", presentNum);
+		printf("%.0lf", presentNum);
 		if (i != 96)
 			printf(", ");
 		veryPastNum = pastNum;
