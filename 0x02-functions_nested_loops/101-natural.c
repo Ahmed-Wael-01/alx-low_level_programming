@@ -7,7 +7,7 @@
 * Description: it does smthing
 * Return: 0
 */
-void main(void)
+int main(void)
 {
 	int endPoint = 1024;
 	int total = 0;
@@ -20,4 +20,5 @@ void main(void)
 	}
 	printf("%d", total);
 	_putchar('\n');
+	return (0);
 }
