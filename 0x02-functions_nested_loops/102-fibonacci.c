@@ -27,4 +27,5 @@ int main(void)
         pastNum = presentNum;
     }
     printf("\n");
+    return (0);
 }
