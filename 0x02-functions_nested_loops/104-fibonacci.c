@@ -9,9 +9,9 @@
 int main(void)
 {
 	int i;
-	int unsigned long pastNum = 2;
-	int unsigned long veryPastNum = 1;
-	int unsigned long presentNum;
+	unsigned int long pastNum = 2;
+	unsigned int long veryPastNum = 1;
+	unsigned int long presentNum;
 
 	printf("%lu, %lu, ", veryPastNum, pastNum);
 	for (i = 1; i <= 96; i++)
