@@ -13,7 +13,6 @@ int main(void)
 	long int veryPastNum = 1;
 	long int presentNum = 0;
 
-	printf("%ld, %ld, ", veryPastNum, pastNum);
 	while (presentNum <= 4000000)
 	{
 		presentNum = pastNum + veryPastNum;
