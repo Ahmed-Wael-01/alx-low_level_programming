@@ -7,7 +7,7 @@
 * Description: it does smthing
 * Return: 0
 */
-void nature(void)
+void main(void)
 {
 	int endPoint = 1024;
 	int total = 0;
