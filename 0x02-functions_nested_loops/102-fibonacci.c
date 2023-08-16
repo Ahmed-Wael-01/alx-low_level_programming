@@ -1,9 +1,7 @@
 #include <stdio.h>
 
 /**
-*  add - print alpha
-* @n: the number to compare
-* @a: another number!!!!!
+*  main - print alpha
 *
 * Description: it does smthing
 * Return: 0
@@ -11,21 +9,21 @@
 int main(void)
 {
 	int i;
-    int pastNum = 2;
-    int veryPastNum = 1;
-    int presentNum;
+	long int pastNum = 2;
+	long int veryPastNum = 1;
+	long int presentNum;
 
-    printf("%d, %d, ", veryPastNum, pastNum);
-    for (i = 1; i <= 48; i++)
-    {
-        presentNum = pastNum + veryPastNum;
+	printf("%ld, %ld, ", veryPastNum, pastNum);
+	for (i = 1; i <= 48; i++)
+	{
+		presentNum = pastNum + veryPastNum;
 
-        printf("%d", presentNum);
-        if (i != 48)
-            printf(", ");
-        veryPastNum = pastNum;
-        pastNum = presentNum;
-    }
-    printf("\n");
-    return (0);
+		printf("%ld", presentNum);
+		if (i != 48)
+			printf(", ");
+		veryPastNum = pastNum;
+		pastNum = presentNum;
+	}
+	printf("\n");
+	return (0);
 }
