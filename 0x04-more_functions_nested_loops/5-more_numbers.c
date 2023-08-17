@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-* print_most_numbers - it does something
+* more_numbers - it does something
 *
 * Description: function that checks for uppercase character
 * Return: 0
 */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int i;
 	int j;
