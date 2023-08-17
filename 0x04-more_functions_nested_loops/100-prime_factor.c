@@ -20,7 +20,7 @@ int main(void)
 			continue;
 		if (NUMBER % prime == 0)
 		{
-			for (if_prime = prime / 2; if_prime >= 1; if_prime--)
+			for (if_prime = prime / 2; if_prime > 1; if_prime--)
 			{
 				if (prime % if_prime == 0)
 					break;
