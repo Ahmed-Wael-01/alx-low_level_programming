@@ -10,9 +10,9 @@
 
 int main(void)
 {
-	int prime;
-	int if_prime;
-	unsigned long int NUMBER = 612852475143;
+	long int prime;
+	long int if_prime;
+	long int NUMBER = 612852475143;
 
 	for (prime = NUMBER / 2; prime > 1; prime--)
 	{
@@ -26,7 +26,7 @@ int main(void)
 					break;
 			}
 			if (if_prime == 1)
-				printf("%d\n", prime);
+				printf("%lu\n", prime);
 			break;
 		}
 	}
