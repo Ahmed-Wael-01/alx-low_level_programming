@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -10,9 +9,9 @@
 
 int main(void)
 {
-	long int prime;
-	long int if_prime;
-	long int NUMBER = 612852475143;
+	long long int prime;
+	long long int if_prime;
+	long long int NUMBER = 612852475143;
 
 	for (prime = NUMBER / 2; prime > 1; prime--)
 	{
@@ -26,7 +25,7 @@ int main(void)
 					break;
 			}
 			if (if_prime == 1)
-				printf("%lu\n", prime);
+				printf("%lld\n", prime);
 			break;
 		}
 	}
