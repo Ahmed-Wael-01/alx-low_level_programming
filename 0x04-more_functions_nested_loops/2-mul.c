@@ -3,7 +3,7 @@
 /**
 *  mul - it does something
 * @a: a variable
-* @a: a variable
+* @b: a variable
 *
 * Description: function that checks for uppercase character
 * Return: 0
