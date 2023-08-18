@@ -25,8 +25,10 @@ int main(void)
 					break;
 			}
 			if (if_prime == 1)
+			{
 				printf("%lu\n", prime);
-			break;
+				break;
+			}
 		}
 	}
 	return (0);
