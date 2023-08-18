@@ -11,19 +11,22 @@
 void print_number(int n)
 {
 	int i = 10;
+    int num = n;
 
-    if (n < 0)
+    if (num < 0)
     {
-        n = -n;
+        num = -num;
         _putchar('-');
     }
     while (n / i > 0 )
     {
         i *= 10;
     }
+
     i /= 10;
-    for (;i > 0; i /= 10)
+
+    for ( ; i > 0 ; i /= 10)
     {
-        _putchar('0' + ((n / i) % 10));
+        _putchar('0' + ((num / i) % 10));
     }
 }
