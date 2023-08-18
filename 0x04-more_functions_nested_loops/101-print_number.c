@@ -2,7 +2,7 @@
 
 /**
 * print_number - it does something
-* @size: a variable
+* @n: a variable
 *
 * Description: function that checks for uppercase character
 * Return: 0
