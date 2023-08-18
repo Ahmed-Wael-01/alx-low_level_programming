@@ -16,12 +16,15 @@ void print_number(int n)
     if (n < 0)
     {
         num = -n;
+
         _putchar('-');
     }
+
     while (num / i > 9)
     {
         i *= 10;
     }
+
     while (i > 0)
     {
         _putchar('0' + ((num / i) % 10));
