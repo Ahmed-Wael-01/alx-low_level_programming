@@ -9,11 +9,14 @@
 
 int main(void)
 {
-	unsigned long int prime;
-	unsigned long int if_prime;
-	unsigned long int NUMBER = 612852475143;
+	long int prime;
+	long int if_prime;
+	long int biggest;
+	long int NUMBER = 612852475143;
+	
+	printf("%ld\n", NUMBER);
 
-	for (prime = NUMBER / 2; prime > 1; prime--)
+	for (prime = 3; prime < NUMBER / 2; prime++)
 	{
 		if (prime % 2 == 0)
 			continue;
@@ -26,10 +29,16 @@ int main(void)
 			}
 			if (if_prime == 1)
 			{
-				printf("%lu\n", prime);
-				break;
+				biggest = prime;
+				if (biggest > 100000)
+					break;
 			}
 		}
+	}
+	printf("%lu\n", biggest);
+	if (prime == 1)
+	{
+		printf("%lu\n", prime);
 	}
 	return (0);
 }
