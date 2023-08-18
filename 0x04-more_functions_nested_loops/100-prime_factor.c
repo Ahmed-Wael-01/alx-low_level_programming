@@ -13,8 +13,6 @@ int main(void)
 	long int if_prime;
 	long int biggest;
 	long int NUMBER = 612852475143;
-	
-	printf("%ld\n", NUMBER);
 
 	for (prime = 3; prime < NUMBER / 2; prime++)
 	{
