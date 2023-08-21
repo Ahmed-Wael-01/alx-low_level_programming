@@ -1,0 +1,29 @@
+#include "main.h"
+
+/**
+ * puts_half - does something
+ * @str: a variable
+ *
+ * Description: a function
+*/
+
+void puts_half(char *str)
+{
+	int i = 0;
+	int n;
+
+	while (str[i + 1] != '\0')
+	{
+		i++;
+	}
+	if ((i + 1) % 2 == 0)
+		n = (i + 1) / 2;
+	else
+		n = i / 2;
+	while (i > n + 1)
+	{
+		_putchar(str[i]);
+		i--;
+	}
+	_putchar('\n');
+}
