@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_array - does something
+ * _strcpy - does something
  * @dest: a variable
  * @src: a variable
  *
@@ -11,6 +11,12 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	*dest = *src;
+	int i = 0;
+
+	while (src[i - 1] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
 	return (dest);
 }
