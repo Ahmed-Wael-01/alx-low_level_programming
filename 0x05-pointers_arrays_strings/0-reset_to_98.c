@@ -3,7 +3,7 @@
 /**
  * reset_to_98 - does something
  * @n: a variable
- * 
+ *
  * Description: a function
 */
 
