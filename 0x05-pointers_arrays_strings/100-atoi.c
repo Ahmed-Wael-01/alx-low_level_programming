@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strlen - does something
+ * _atoi - does something
  * @s: a variable
  *
  * Description: a function
@@ -16,10 +16,15 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		if (s[i] == '-')
+		{
+			if (is_negative == 0)
+				is_negative = 1;
+			else
+				is_negative = 0;
+		}
 		if (s[i] >= 48 && s[i] <= 57)
 		{
-			if (s[i - 1] == '-')
-				is_negative = 1;
 			num = num * 10 + (s[i] - 48);
 		}
 		else if (num > 0)
