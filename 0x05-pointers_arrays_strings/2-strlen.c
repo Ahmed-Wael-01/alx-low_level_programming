@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * swap_int - does something
+ * _strlen - does something
  * @s: a variable
  *
  * Description: a function
