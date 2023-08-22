@@ -15,7 +15,7 @@ int main(void)
 	int i = 0;
 	srand(time(NULL));
 
-	for (i = 0; i < rand() % 100; i++)
+	for (i = 0; i < 70; i++)
 	{ 
 		putchar(rand() % 128);
 	}
