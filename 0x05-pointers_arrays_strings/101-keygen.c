@@ -15,7 +15,7 @@ int main(void)
 	int i = 0;
 	srand(time(NULL));
 
-	for (i = 0; i < 20; i++)
+	for (i = 0; i < 50; i++)
 	{ 
 		_putchar(rand() % 100);
 	}
