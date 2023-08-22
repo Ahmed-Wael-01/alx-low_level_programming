@@ -12,12 +12,16 @@
 
 int main(void)
 {
-	int i = 0;
+	int sum;
+	char a;
 	srand(time(NULL));
 
-	for (i = 0; i < 70; i++)
+	for (; sum <= 2645;)
 	{ 
-		putchar(rand() % 128);
+		a = rand() % 128;
+		sum += a;
+		_putchar(a);
 	}
+	_putchar(2772 - sum);
 	return (0);
 }
