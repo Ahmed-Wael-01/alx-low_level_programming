@@ -15,9 +15,9 @@ int main(void)
 	int i = 0;
 	srand(time(NULL));
 
-	for (i = 0; i < rand() % 120; i++)
+	for (i = 0; i < rand() % 100; i++)
 	{ 
-		_putchar(rand() % 169);
+		putchar(rand() % 128);
 	}
 	return (0);
 }
