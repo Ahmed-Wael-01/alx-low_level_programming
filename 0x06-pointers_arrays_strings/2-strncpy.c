@@ -24,13 +24,10 @@ char *_strncpy(char *dest, char *src, int n)
 		else
 			break;
 	}
-	if (n > i)
+	while (i < n)
 	{
-		while (dest[i] != '\0')
-		{
-			dest[i] = '\0';
-			i++;
-		}
+		dest[i] = '\0';
+		i++;
 	}
 	return (dest);
 }
