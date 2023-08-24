@@ -19,7 +19,10 @@ char *rot13(char *str)
 		for (j = 0; j < 52; j++)
 		{
 			if (str[i] == values[j])
+			{
 				str[i] = newVal[j];
+				break;
+			}
 		}
 	}
 	return (str);
