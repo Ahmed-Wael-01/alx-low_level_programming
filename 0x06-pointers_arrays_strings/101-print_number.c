@@ -5,7 +5,6 @@
 * @n: a variable
 *
 * Description: function that checks for uppercase character
-* Return: 0
 */
 
 void print_number(int n)
