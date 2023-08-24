@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strcmp - does something
+ * reverse_array - does something
  * @a: a variable
  * @n: a variable
  *
@@ -16,8 +16,8 @@ void reverse_array(int *a, int n)
 	while (i < n)
 	{
 		temp = a[i];
-		a[i] = a[n];
-		a[n] = temp;
+		a[i] = a[n - 1];
+		a[n - 1] = temp;
 		i++;
 		n--;
 	}
