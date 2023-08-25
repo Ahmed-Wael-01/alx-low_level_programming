@@ -37,25 +37,38 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	rev_string(n2);
 	for (i = 0; i < size_r; i++)
 	{
-		if (n1[i] != '\0' && n2[i] != '\0')
+		if (n1[i]  && n2[i])
 		{
-			r[i] = ((n1[i] - 48 + n2[i] - 48) % 10) + add_one;
-			if ((n1[i] - 48 + n2[i] - 48) > 9)
+			r[i] = ((n1[i] - 48 + n2[i] - 48 + add_one) % 10) + 48;
+			if ((n1[i] - 48 + n2[i] - 48 + add_one) > 9)
 				add_one = 1;
 			else
-				add_one = 1;
+				add_one = 0;
 		}
 		else if (n1[i] != '\0')
 		{
-			r[i] = ((n1[i] - 48) % 10) + add_one;
-			add_one = 0;
+			r[i] = ((n1[i] - 48 + add_one) % 10) + 48;
+			if ((n1[i] - 48 + add_one) > 9)
+				add_one = 1;
+			else
+				add_one = 0;
 		}
 		else if (n2[i] != '\0')
 		{
-			r[i] = ((n2[i] - 48) % 10) + add_one;
-			add_one = 0;
+			r[i] = ((n2[i] - 48 + add_one) % 10) + 48;
+			if ((n2[i] - 48 + add_one) > 9)
+				add_one = 1;
+			else
+				add_one = 0;
+		}
+		else
+		{
+			r[i] = add_one + 48;
+			break;
 		}
 	}
+	rev_string(n1);
+	rev_string(n2);
 	rev_string(r);
 	r[i] = '\0';
 	return (r);
