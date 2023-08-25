@@ -11,25 +11,6 @@
  * Return: dest
 */
 
-void rev_string(char *s)
-{
-	int i = 0;
-	int j = 0;
-	char new;
-
-	while (s[i + 1] != '\0')
-	{
-		i++;
-	}
-	while (j <= i && s[i] != '\0')
-	{
-		new = s[j];
-		s[j] = s[i];
-		s[i] = new;
-		j++;
-		i--;
-	}
-}
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, add_one = 0;
