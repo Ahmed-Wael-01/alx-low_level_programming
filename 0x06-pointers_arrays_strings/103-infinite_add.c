@@ -32,20 +32,32 @@ void rev_string(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, add_one = 0;
+int len1 = 0, len2 = 0;
 
+	while (n1[len1] != '\0')
+	{
+		len1++;
+	}
+	
+	while (n2[len2] != '\0')
+	{
+		len2++;
+	}
 	rev_string(n1);
 	rev_string(n2);
 	for (i = 0; i < size_r; i++)
 	{
-		if (n1[i]  && n2[i])
+		if (i < len1  && i < len2)
 		{
+			printf("%c\n%c\n%d\n",n1[i],n2[i],i);
 			r[i] = ((n1[i] - 48 + n2[i] - 48 + add_one) % 10) + 48;
+			printf("%s\n", r);
 			if ((n1[i] - 48 + n2[i] - 48 + add_one) > 9)
 				add_one = 1;
 			else
 				add_one = 0;
 		}
-		else if (n1[i] != '\0')
+		else if (i < len1)
 		{
 			r[i] = ((n1[i] - 48 + add_one) % 10) + 48;
 			if ((n1[i] - 48 + add_one) > 9)
@@ -53,7 +65,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			else
 				add_one = 0;
 		}
-		else if (n2[i] != '\0')
+		else if (i < len2)
 		{
 			r[i] = ((n2[i] - 48 + add_one) % 10) + 48;
 			if ((n2[i] - 48 + add_one) > 9)
@@ -63,7 +75,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		}
 		else
 		{
-			r[i] = add_one + 48;
+			if (add_one == 1)
+				r[i] = add_one + 48;
+			i++;
 			break;
 		}
 	}
@@ -71,5 +85,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	rev_string(n2);
 	rev_string(r);
 	r[i] = '\0';
+	printf("%s", r);
 	return (r);
 }
