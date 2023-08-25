@@ -20,8 +20,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		len1++;
 	while (n2[len2] != '\0')
 		len2++;
-	rev_string(n1);
-	rev_string(n2);
+	rev_string(*n1);
+	rev_string(*n2);
 	for (i = 0; i < size_r; i++)
 	{
 		if (i < len1  && i < len2)
@@ -56,7 +56,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		}
 	}
-	rev_string(r);
+	rev_string(*r);
 	r[i] = '\0';
 	return (r);
 }
