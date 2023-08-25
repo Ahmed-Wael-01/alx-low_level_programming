@@ -32,7 +32,7 @@ void rev_string(char *s)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i, add_one = 0;
-int len1 = 0, len2 = 0;
+	int len1 = 0, len2 = 0;
 
 	while (n1[len1] != '\0')
 	{
@@ -49,9 +49,7 @@ int len1 = 0, len2 = 0;
 	{
 		if (i < len1  && i < len2)
 		{
-			printf("%c\n%c\n%d\n",n1[i],n2[i],i);
 			r[i] = ((n1[i] - 48 + n2[i] - 48 + add_one) % 10) + 48;
-			printf("%s\n", r);
 			if ((n1[i] - 48 + n2[i] - 48 + add_one) > 9)
 				add_one = 1;
 			else
@@ -85,6 +83,5 @@ int len1 = 0, len2 = 0;
 	rev_string(n2);
 	rev_string(r);
 	r[i] = '\0';
-	printf("%s", r);
 	return (r);
 }
