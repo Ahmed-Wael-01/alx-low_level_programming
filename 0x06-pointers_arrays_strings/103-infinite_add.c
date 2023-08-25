@@ -10,6 +10,7 @@
  * Description: a function
  * Return: dest
 */
+
 void rev_string(char *s)
 {
 	int i = 0;
@@ -35,14 +36,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len1 = 0, len2 = 0;
 
 	while (n1[len1] != '\0')
-	{
 		len1++;
-	}
-	
 	while (n2[len2] != '\0')
-	{
 		len2++;
-	}
 	rev_string(n1);
 	rev_string(n2);
 	for (i = 0; i < size_r; i++)
@@ -79,8 +75,6 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			break;
 		}
 	}
-	rev_string(n1);
-	rev_string(n2);
 	rev_string(r);
 	r[i] = '\0';
 	return (r);
