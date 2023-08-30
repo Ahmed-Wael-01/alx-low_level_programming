@@ -12,8 +12,8 @@ int square_root(int n, int guess)
 	if (guess * guess == n)
 		return (guess);
 	else if (guess * guess > n)
-		square_root(n, guess - 1);
-	else if (guess * guess < n)
+		return (square_root(n, guess - 1));
+	else
 		return (-1);
 }
 
