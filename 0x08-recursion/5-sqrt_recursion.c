@@ -13,11 +13,9 @@ int square_root(int n, int guess)
 		return (guess);
 	else if (guess * guess > n)
 		square_root(n, guess - 1);
-	else
-		return (-1);
-	
+	return (-1);
 }
 int _sqrt_recursion(int n)
 {
-	square_root(n, n);
+	return(square_root(n, n));
 }
