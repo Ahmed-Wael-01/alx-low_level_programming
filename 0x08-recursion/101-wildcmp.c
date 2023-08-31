@@ -2,8 +2,9 @@
 
 /**
  * wildcmp - does something
- * @s: a variable
- * @s: a variable
+ * @s1: a variable
+ * @s2: a variable
+ *
  * Description: a function
  * Return: 0
 */
