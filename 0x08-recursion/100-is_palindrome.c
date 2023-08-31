@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_palindrome - does something
+ * length - does something
  * @s: a variable
  *
  * Description: a function
@@ -30,7 +30,7 @@ int pal(char *s, int f, int b)
 	if (*(s + f) != *(s + b))
 		return (0);
 	if (f < b + 1)
-		return(pal(s, f + 1, b - 1));
+		return (pal(s, f + 1, b - 1));
 	return (1);
 }
 
