@@ -44,11 +44,7 @@ int pal(char *s, int f, int b)
 
 int is_palindrome(char *s)
 {
-	int i = 0;
-
 	if (*s == '\0' || *(s + 1) == '\0')
 		return (1);
-	while (*(s + i) != '\0')
-		i++;
-	return (pal(s, 0, i - 1));
+	return (pal(s, 0, length(s) - 1));
 }
