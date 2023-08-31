@@ -1,6 +1,21 @@
 #include "main.h"
 
 /**
+ * is_palindrome - does something
+ * @s: a variable
+ *
+ * Description: a function
+ * Return: 0
+*/
+
+int length(char *s)
+{
+	if (*s != '\0')
+		return (length(s) + 1);
+	return (0);
+}
+
+/**
  * pal - does something
  * @s: a variable
  * @f: a variable
