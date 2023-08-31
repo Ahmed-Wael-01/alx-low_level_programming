@@ -14,8 +14,8 @@ int pal(char *s, int f, int b)
 {
 	if (*(s + f) != *(s + b))
 		return (0);
-	if (s < b + 1)
-		return(pal(s, s + 1, b - 1));
+	if (f < b + 1)
+		return(pal(s, f + 1, b - 1));
 	return (1);
 }
 
