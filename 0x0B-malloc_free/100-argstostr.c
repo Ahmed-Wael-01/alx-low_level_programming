@@ -31,21 +31,19 @@ int length(char *av)
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, bpoint, size;
-	char **str;
+	int i, j, bpoint = 0, size = 0;
+	char *str;
 
-	str = malloc(sizeof(char) * ac);
+	while (i < ac)
+		size += length(*(av + i));
+	str = malloc(sizeof(char) * size);
 	if (!ac || !av || !str)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		size = length(*(av + i));
-		*(str + i) = malloc(sizeof(char) * size);
-		if (!*(str + i))
-			return (NULL);
-		for (j = 0; j < size; j++)
-			*(*(str + i) + j) = *(*(av + i) + j);
-		*(*(str + i) + j) = '\n';
+		for (j = 0;*(*(av + i) + j) != '\0'; j++)
+			*(str + bpoint++) = *(*(av + i) + j);
+		*(str + bpoint++) = '\n';
 	}
 	return (str);
 }
