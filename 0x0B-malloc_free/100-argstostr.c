@@ -36,14 +36,15 @@ char *argstostr(int ac, char **av)
 
 	while (i < ac)
 		size += length(*(av + i++));
-	str = malloc(sizeof(char) * size);
+	str = malloc(sizeof(char) * size + 1);
 	if (!ac || !av || !str)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; *( *(av + i) + j) != '\0'; j++)
+		for (j = 0; *(*(av + i) + j) != '\0'; j++)
 			*(str + bpoint++) = *(*(av + i) + j);
 		*(str + bpoint++) = '\n';
 	}
+	*(str + bpoint++) = '\0';
 	return (str);
 }
