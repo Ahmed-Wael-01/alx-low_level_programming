@@ -31,7 +31,7 @@ int length(char *av)
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, bpoint = 0, size = 0;
+	int i = 0, j, bpoint = 0, size = 0;
 	char *str;
 
 	while (i < ac)
