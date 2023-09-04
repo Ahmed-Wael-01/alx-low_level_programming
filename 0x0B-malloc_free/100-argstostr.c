@@ -5,7 +5,6 @@
 /**
  * length - it is a function
  * @av: a parameter
- * @count: a parameter
  *
  * Description: it does something
  * Return: 0
@@ -35,7 +34,7 @@ char *argstostr(int ac, char **av)
 	char *str;
 
 	while (i < ac)
-		size += length(*(av + i));
+		size += length(*(av + i++));
 	str = malloc(sizeof(char) * size);
 	if (!ac || !av || !str)
 		return (NULL);
