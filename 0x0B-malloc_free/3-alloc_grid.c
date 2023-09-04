@@ -17,10 +17,8 @@ int **alloc_grid(int width, int height)
 	int j;
 	int **square;
 
-	if (height <= 0 || width <= 0)
-		return (NULL);
-	square = malloc(sizeof(int) * height);
-	if (!square)
+	square = malloc(sizeof(int *) * height);
+	if (height <= 0 || width <= 0 || !square)
 		return (NULL);
 	for (i = 0; i < height; i++)
 	{
