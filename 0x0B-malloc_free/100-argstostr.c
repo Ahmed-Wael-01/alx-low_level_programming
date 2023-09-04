@@ -15,7 +15,7 @@ unsigned int length(char *av)
 	unsigned int i;
 
 	for (i = 0; *(av + i) != '\0'; i++)
-		i++;
+		;
 	return (i);
 }
 
