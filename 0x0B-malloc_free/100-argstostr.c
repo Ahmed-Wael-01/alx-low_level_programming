@@ -10,9 +10,9 @@
  * Return: 0
 */
 
-int length(char *av)
+unsigned int length(char *av)
 {
-	int i;
+	unsigned int i;
 
 	for (i = 0; *(av + i) != '\0'; i++)
 		i++;
@@ -30,7 +30,8 @@ int length(char *av)
 
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j, bpoint = 0, size = 0;
+	int i = 0, j, bpoint = 0;
+	unsigned int size = 0;
 	char *str;
 
 	while (i < ac)
@@ -40,7 +41,7 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0;*(*(av + i) + j) != '\0'; j++)
+		for (j = 0; *( *(av + i) + j) != '\0'; j++)
 			*(str + bpoint++) = *(*(av + i) + j);
 		*(str + bpoint++) = '\n';
 	}
