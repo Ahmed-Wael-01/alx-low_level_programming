@@ -1,14 +1,5 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-/**
- * _strdup - it is a function
- * @str: a parameter
- *
- * Description: it does something
- * Return: 0
-*/
 
 char *_strdup(char *str)
 {
@@ -16,7 +7,7 @@ char *_strdup(char *str)
 	int len = 0;
 	char *newstr;
 
-	if (!str)
+    if (!str)
 		return (NULL);
 	while (*(str + len))
 		len++;
@@ -27,4 +18,24 @@ char *_strdup(char *str)
 		*(newstr + i) = *(str + i);
 	*(newstr + i) = *(str + i);
 	return (newstr);
+}
+
+
+/**
+ * main - check the code .
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char *s;
+
+	s = _strdup(NULL);
+	if (s == NULL)
+	{
+		printf("failed to allocate memory\n");
+		return (1);
+	}
+	free(s);
+	return (0);
 }
