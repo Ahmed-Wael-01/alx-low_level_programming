@@ -12,7 +12,7 @@
 
 int wordcount(char *str)
 {
-	int i;
+	int i = 0;
 	int count;
 
 	while (*(str + i) == ' ')
@@ -39,24 +39,24 @@ int wordcount(char *str)
 
 char **strtow(char *str)
 {
-	int i, j, counter = 0, bp = 0;
-	char **ptr = malloc(sizeof(char *) * wordcount(str) + 1);
+	int i, j, counter, bp = 0;
+	int words = wordcount(str);
+	char **ptr = malloc(sizeof(char *) * words + 1);
 
 	if (str == NULL || *str == '\0' || !ptr)
 		return (NULL);
-	for (i = 0; i < wordcount(str); i++)
+	for (i = 0; i < words; i++)
 	{
 		while (*(str + bp) == ' ')
 			bp++;
-		while (*(str + bp + counter) != ' ')
-			counter++;
+		for (counter = 0; *(str + bp + counter) != ' '; counter++)
+			;
 		*(ptr + i) = malloc(sizeof(char) * counter);
 		if (!*(ptr + i))
 			return (NULL);
-		for (j = 0; *(str + bp) != ' ' || *(str + bp) != '\0'; j++, bp++)
+		for (j = 0; *(str + bp) != ' ' && *(str + bp) != '\0'; j++, bp++)
 			*(*(ptr + i) + j) = *(str + bp);
 		*(*(ptr + i) + j) = '\0';
 	}
-	*(ptr + i) = NULL;
 	return (ptr);
 }
