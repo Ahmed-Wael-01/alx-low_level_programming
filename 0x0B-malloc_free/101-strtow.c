@@ -12,22 +12,27 @@
 
 int wordcount(char *str)
 {
-	int index = 0, words = 0, len = 0;
+int i = 0, words = 0;
 
-	for (index = 0; *(str + index); index++)
-		len++;
-
-	for (index = 0; index < len; index++)
-	{
-		if (*(str + index) != ' ')
-		{
-			words++;
-			index += word_len(str + index);
-		}
-	}
-
-	return (words);
+while (i <= len(str))
+{
+if ((str[i] != ' ') && (str[i] != '\0'))
+{
+i++;
 }
+else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+{
+words += 1;
+i++;
+}
+else
+{
+i++;
+}
+}
+return (words);
+}
+
 
 /**
  * strtow - it is a function
