@@ -41,7 +41,7 @@ char **strtow(char *str)
 {
 	int i, j, counter, bp = 0;
 	int words = wordcount(str);
-	char **ptr = malloc(sizeof(char *) * (words + 1));
+	char **ptr = malloc(sizeof(char *) * words + 1);
 
 	if (str == NULL || *str == '\0' || !ptr || !words)
 		return (NULL);
