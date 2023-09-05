@@ -43,7 +43,7 @@ char **strtow(char *str)
 	int words = wordcount(str);
 	char **ptr = malloc(sizeof(char *) * words + 1);
 
-	if (str == NULL || *str == '\0' || !ptr)
+	if (str == NULL || *str == '\0' || !ptr || words)
 		return (NULL);
 	for (i = 0; i < words; i++)
 	{
