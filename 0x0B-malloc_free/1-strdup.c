@@ -18,7 +18,6 @@ return (NULL);
 }
 for (x = 0; str[x] != '\0'; x++)
 ;
-printf("%d\n", x);
 m = (char *) malloc(x * sizeof(*str) + 1);
 if (m == 0)
 {
