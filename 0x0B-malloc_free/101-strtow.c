@@ -53,12 +53,7 @@ char **strtow(char *str)
 			;
 		*(ptr + i) = malloc(sizeof(char) * counter + 1);
 		if (!*(ptr + i))
-		{
-			while (i--)
-				free(*(ptr + i));
-			free(ptr);
 			return (NULL);
-		}
 		for (j = 0; *(str + bp) != ' ' && *(str + bp) != '\0'; j++, bp++)
 			*(*(ptr + i) + j) = *(str + bp);
 		*(*(ptr + i) + j) = '\0';
