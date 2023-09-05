@@ -49,7 +49,7 @@ char **strtow(char *str)
 	{
 		while (*(str + bp) == ' ')
 			bp++;
-		for (counter = 0; *(str + bp + counter) != ' '; counter++)
+		for (counter = 0; *(str + bp + counter) != ' ' && *(str + bp + counter) != '\0' ; counter++)
 			;
 		*(ptr + i) = malloc(sizeof(char) * counter + 1);
 		if (!*(ptr + i))
