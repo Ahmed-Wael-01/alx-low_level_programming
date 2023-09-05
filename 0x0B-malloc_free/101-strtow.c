@@ -12,21 +12,21 @@
 
 int wordcount(char *str)
 {
-	int i = 0;
-	int count;
+	int index = 0, words = 0, len = 0;
 
-	while (*(str + i) == ' ')
-		i++;
-	for (count = 0; *(str + i) != '\0'; i++)
+	for (index = 0; *(str + index); index++)
+		len++;
+
+	for (index = 0; index < len; index++)
 	{
-		if (*(str + i) != ' ')
-			continue;
-		else if (*(str + i) == ' ' && *(str + i - 1) != ' ')
-			count++;
+		if (*(str + index) != ' ')
+		{
+			words++;
+			index += word_len(str + index);
+		}
 	}
-	if (*(str + i) == '\0' && *(str + i - 1) != ' ')
-		count++;
-	return (count);
+
+	return (words);
 }
 
 /**
