@@ -58,5 +58,6 @@ char **strtow(char *str)
 			*(*(ptr + i) + j) = *(str + bp);
 		*(*(ptr + i) + j) = '\0';
 	}
+	*(ptr + i) = NULL;
 	return (ptr);
 }
