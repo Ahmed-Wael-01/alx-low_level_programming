@@ -51,7 +51,8 @@ char **strtow(char *str)
 			bp++;
 		for (counter = 0; *(str + bp + counter) != ' '; counter++)
 			;
-		*(ptr + i) = malloc(sizeof(char) * counter);
+		printf("letter count: %d\n", counter);
+		*(ptr + i) = malloc(sizeof(char) * counter + 1);
 		if (!*(ptr + i))
 			return (NULL);
 		for (j = 0; *(str + bp) != ' ' && *(str + bp) != '\0'; j++, bp++)
