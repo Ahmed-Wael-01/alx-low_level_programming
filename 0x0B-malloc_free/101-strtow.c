@@ -10,27 +10,24 @@
  * Return: 0
 */
 
-int wordcount(char *s)
+int wordcount(char *str)
 {
-	int flag, c, w;
+	int i = 0;
+	int count;
 
-	flag = 0;
-	w = 0;
-
-	for (c = 0; s[c] != '\0'; c++)
+	while (*(str + i) == ' ')
+		i++;
+	for (count = 0; *(str + i) != '\0'; i++)
 	{
-		if (s[c] == ' ')
-			flag = 0;
-		else if (flag == 0)
-		{
-			flag = 1;
-			w++;
-		}
+		if (*(str + i) != ' ')
+			continue;
+		else if (*(str + i) == ' ' && *(str + i - 1) != ' ')
+			count++;
 	}
-
-	return (w);
+	if (*(str + i) == '\0' && *(str + i - 1) != ' ')
+		count++;
+	return (count);
 }
-
 
 /**
  * strtow - it is a function
