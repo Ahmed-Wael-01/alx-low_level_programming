@@ -1,6 +1,6 @@
 #include "dog.h"
 #include <stdio.h>
-
+#include <stdlib.h>
 /**
  * new_dog - initialize dogs
  * @name: a var
@@ -12,9 +12,12 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t newDog = {name, age, owner};
-	if (!new_dog)
+	dog_t *newDog;
+	newDog = malloc(sizeof(dog_t));
+	if (!newDog)
 		return (NULL);
-	else
-		return (&newDog);
+	newDog->name = name;
+	newDog->age = age;
+	newDog->owner = owner;
+	return (newDog);
 }
