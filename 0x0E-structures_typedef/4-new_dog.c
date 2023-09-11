@@ -8,11 +8,13 @@
  * @owner: a var
  *
  * Description: it sets the value of functions inside the structure
+ * Return: pointer to dog
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newDog;
+
 	newDog = malloc(sizeof(dog_t));
 	if (!newDog)
 		return (NULL);
