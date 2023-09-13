@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * array_iterator - it is a function
+ * int_index - it is a function
  * @array: a parameter
  * @size: a parameter
  * @cmp: a parameter
