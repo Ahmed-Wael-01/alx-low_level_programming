@@ -1,5 +1,6 @@
 #include "3-calc.h"
 
+
 /**
  * get_op_func - function operation name
  *
@@ -21,8 +22,12 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i = 0;
 
-	while (ops[i].op[0] != s[0] || i != 5)
+	while (i < 5)
+	{
+		if (ops[i].op[0] == s[0])
+			break;
 		i++;
+	}
 
 	return (ops[i].f);
 }
