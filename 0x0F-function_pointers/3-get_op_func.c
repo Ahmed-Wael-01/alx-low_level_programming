@@ -1,24 +1,6 @@
 #include "3-calc.h"
 
 /**
- * index_func - function operation name
- *
- * @i: index
- * @ops: array
- * @s: array
- *
- * Description: calculator for dummies
- * Return: 0
- */
-
-int index_func(int i, op_t ops[], char *s)
-{
-	if (ops[i].op[0] == s[0] || i == 5)
-		return (i);
-	return (index_func(i + 1, ops, s));
-}
-
-/**
  * get_op_func - function operation name
  *
  * @s: The operator
