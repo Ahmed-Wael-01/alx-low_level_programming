@@ -2,6 +2,25 @@
 #include <string.h>
 
 /**
+ * _strlen - does something
+ * @s: a variable
+ *
+ * Description: a function
+ * Return: 0
+*/
+
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * add_node - returns number of elements
  * @head: a node
  * @str: a var
@@ -15,18 +34,10 @@ list_t *add_node(list_t **head, const char *str)
 	list_t *new;
 
 	new = malloc(sizeof(list_t));
-	if (!head || !new)
+	if (!new)
 		return (NULL);
-	if (str)
-	{
-		new->str = strdup(str);
-		if (!new_head->str)
-		{
-			free(new);
-			return (NULL);
-		}
-		new->len = strlen(new->str);
-	}
+	new->str = strdup(str);
+	new->len = _strlen(str);
 	new->next = *head;
 	*head = new;
 	return (new);
