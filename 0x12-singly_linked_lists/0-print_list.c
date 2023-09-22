@@ -1,6 +1,14 @@
 #include "lists.h"
 #include <stdio.h>
 
+/**
+ * print_list - prints a list
+ * @h: a var
+ *
+ * Description: it does something
+ * Return: 0
+ */
+
 size_t print_list(const list_t *h)
 {
 	const list_t *curr = h;
