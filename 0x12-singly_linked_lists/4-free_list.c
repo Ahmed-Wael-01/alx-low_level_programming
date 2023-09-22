@@ -2,6 +2,7 @@
 
 /**
  * free_list - returns number of elements
+ * @head: pointer to a node
  *
  * Description: it does something
  */
