@@ -1,12 +1,12 @@
 #include <stdio.h>
 
+void  premain(void) __attribute__((constructor));
+
 /**
  * premain - prints something before the main func
  *
  * Descriptions: nothing new
  */
-
-void premain(void)__attribute__ ((constructor));
 
 void premain(void)
 {
