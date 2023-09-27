@@ -16,6 +16,8 @@ listint_t *find_listint_loop(listint_t *head)
 	while (turtle != NULL && rabbit != NULL)
 	{
 		turtle = turtle->next;
+		if (!rabbit->next->next)
+			return (NULL);
 		rabbit = rabbit->next->next;
 
 		if (turtle == rabbit)
