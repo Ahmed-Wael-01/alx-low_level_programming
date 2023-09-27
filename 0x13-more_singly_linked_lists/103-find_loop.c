@@ -10,8 +10,8 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-	listint_t *turtle;
-	listint_t *rabbit;
+	listint_t *turtle = head;
+	listint_t *rabbit = head;
 
 	while (turtle != NULL && rabbit != NULL && rabbit->next != NULL)
 	{
