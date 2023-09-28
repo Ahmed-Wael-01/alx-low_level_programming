@@ -21,6 +21,7 @@ void print_binary(unsigned long int n)
 		}
 		else if (flag)
 			_putchar(48);
+		index--;
 	}
 	if (!flag)
 		_putchar(48);
