@@ -30,7 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	sum = write(1, buffer, sum);
+	sum = write(STDOUT_FILENO, buffer, sum);
 	free(buffer);
 	close(dest);
 	return (sum);
