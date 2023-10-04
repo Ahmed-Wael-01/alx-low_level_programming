@@ -12,16 +12,18 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t bytes = 0, len = strlen(text_content);
+	int dest;
 
 	if (!filename)
 		return (-1);
-	fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (fd == -1)
+	dest = open(filename, O_RDONLY | O_CREAT | O_TRUNC, 0600);
+	if (dest == -1)
 		return (-1);
-	if (len)
-		bytes = write(fd, text_content, len);
-	close(fd);
-	return (bytes == len ? 1 : -1);
+	if (text_content == NULL)
+	{
+		close(dest);
+		return (1);
+	}
+	write(dest, text_content, strlen(text_content));
+	return (1);
 }
