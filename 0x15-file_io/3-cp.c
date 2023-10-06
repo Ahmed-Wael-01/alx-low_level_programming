@@ -30,7 +30,7 @@ int main(int argc, char **argv)
 		tst = read(fd1, buf, 1024);
 		if (tst == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
 		}
 		tst = write(fd2, buf, tst);
