@@ -28,6 +28,11 @@ int main(int argc, char **argv)
 	buf = malloc(1024 * sizeof(char));
 	do {
 		tst = read(fd1, buf, 1024);
+		if (tst == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", arg[1]);
+			exit(98);
+		}
 		tst = write(fd2, buf, tst);
 		if (tst == -1)
 		{
@@ -39,15 +44,9 @@ int main(int argc, char **argv)
 	free(buf);
 	tst = close(fd1);
 	if (tst == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1), exit(100);
 	tst = close(fd2);
 	if (tst == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2);
-		exit(100);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd2), exit(100);
 	return (0);
 }
