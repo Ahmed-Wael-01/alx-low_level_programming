@@ -44,7 +44,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		new->next = NULL;
 		new->prev = pre;
-		pre ? pre->next = new : 0;
+		pre ? pre->next = new : *h = new;
 	}
 	if (track != idx)
 	{
