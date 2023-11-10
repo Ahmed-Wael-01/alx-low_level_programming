@@ -20,7 +20,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		free(new);
 		return (NULL);
 	}
-	new->n = n, curr = *h;
+	new->n = n, curr = *h, pre = NULL;
 	while (curr)
 	{
 		if (track == idx)
