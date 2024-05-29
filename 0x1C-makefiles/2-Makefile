@@ -3,7 +3,7 @@ SRC = *.c
 OBJ = ${SRC:%.c=%.o}
 NAME = school
 
-all: %.o
-	${CC} ${OBJ} -o ${NAME}
 %.o: %.c m.h
 	${CC} -c -o $@ $<
+all: %.o
+        ${CC} ${OBJ} -o ${NAME}
