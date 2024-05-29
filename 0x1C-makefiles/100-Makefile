@@ -11,6 +11,6 @@ all: ${OBJ} m.h
 clean:
 	${RM} *~ ${NAME}
 oclean:
-	${RM} ${OBJ}
+	${RM} *${OBJ}
 fclean: clean oclean
 re: fclean all
